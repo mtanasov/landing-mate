@@ -1,0 +1,218 @@
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Inter, sans-serif;
+  color: #292929;
+  font-size: 16px;
+  line-height: 140%;
+}
+
+section {
+  margin-bottom: 120px;
+}
+
+.header,
+.menu {
+  box-sizing: border-box;
+  height: 100vh;
+  padding: 64px 120px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  background-image: url(./image/Headphones-image-1.png);
+  justify-content: space-between;
+}
+
+.menu {
+  /* display: none; */
+
+  background-color: #e8eff9;
+  justify-content: start;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  transform: translateX(-100%);
+  transition: transform 500ms ease-in;
+}
+
+.menu:target {
+  transform: translateX(0%);
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 22px;
+  letter-spacing: 2px;
+  text-align: left;
+  gap: 32px;
+}
+
+.nav__link {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: black;
+}
+
+.header__top,
+.menu__top {
+  display: flex;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.header__title {
+  font-size: 48px;
+  line-height: 100%;
+  font-weight: 800;
+  font-style: italic;
+  letter-spacing: -1.5px;
+  margin-top: 40;
+  margin-bottom: 0;
+}
+
+.menu__top {
+  margin-bottom: 64px;
+}
+
+.main {
+  padding: 120px;
+  background-color: #e8eff9;
+}
+
+.title {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 100%;
+  letter-spacing: -1.5px;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 64px;
+}
+
+.how-to-buy__title {
+  text-align: inherit;
+}
+
+.recommended__products {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+}
+
+/* .product {
+} */
+
+.product {
+  flex-basis: 324px;
+}
+
+.product__title {
+  margin-top: 0;
+  margin-bottom: 8px;
+  font-size: 16px;
+  line-height: 140%;
+}
+
+.product__photo {
+  width: 100%;
+  margin-bottom: 32px;
+}
+
+.categories {
+  max-width: 1020px;
+  margin: 0 auto;
+  margin-bottom: 120px;
+}
+
+.product__category {
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+.product__price {
+  font-weight: 700;
+  margin: 0;
+}
+
+.category {
+  margin-bottom: 64px;
+}
+
+.category__photos {
+  display: flex;
+  gap: 3%;
+  margin-bottom: 16px;
+}
+
+.photo-wide {
+  width: 65%;
+}
+.photo-square {
+  width: 32%;
+}
+
+.how-to-buy {
+  display: flex;
+  gap: 24px;
+  max-width: 1020px;
+  margin: 0 auto;
+}
+
+.how-to-buy__title {
+  flex-basis: 50%;
+}
+
+.how-to-byu__content {
+  flex-basis: 50%;
+}
+
+.how-to-byu__benefits {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 40px 0;
+  font-weight: 700;
+}
+
+.footer {
+  position: sticky;
+  bottom: 0;
+  z-index: -1;
+  height: 460px;
+  background-image: url(./image/footer.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media (max-width: 640px) {
+  .main {
+    padding: 20px;
+  }
+  .header,
+  .menu {
+    padding: 24px 20px;
+  }
+  .recommended__products,
+  .how-to-buy {
+    flex-direction: column;
+  }
+  .header__title,
+  .title {
+    font-size: 28px;
+  }
+}
